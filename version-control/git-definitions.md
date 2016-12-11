@@ -14,3 +14,5 @@ records changes to repository.  A good message describes the changes.
 
 * What is a merge conflict?
 a conflict with changes on the same file.
+
+release 2
