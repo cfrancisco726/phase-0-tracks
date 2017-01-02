@@ -14,19 +14,19 @@ cite {
   list-style-type: none;
   padding-left: 0px;
   width: 20%;
-  display: block;
   vertical-align: text-top;
   float: left;
   min-width: 50px;
+  display: block;
  
 
 }
 #main {
   width: 80%;
-  display: block;
   vertical-align: text-top;
   float: right;
   min-width: 300px;
+  display: block;
   
 }
 
@@ -55,22 +55,23 @@ body {
 
 @media screen and (max-width: 500px) {
  h1 {
-   background-color: green;
-   font-size: 20px;
+  background-color: #AEE3D4;
+  padding: 10px;
+  font-size: 20px;
  }
+
  #external-links ul {
   width: 100%;
-  position: absolute;
-   left: 10%;
-   right: 10%;
-   padding: 20px;
+  padding: 20px;
+  float: none;
+  background-color: #EFD8D3;
 
 }
 #main {
   width: 100%;
-  position: absolute;
-   left: 10%;
-   right: 10%;
+  left: 10%;
+  right: 10%;
+
 body {
   width:300px;
   margin:auto;
