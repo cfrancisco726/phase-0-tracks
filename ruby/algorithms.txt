@@ -1,0 +1,42 @@
+Using an elevator Algorithm
+
+listen to humans floor command
+visually scan for elevator buttons
+move with in touching distance from elevator buttons
+visually scan for number on button that matches
+once number found, raise finger and arm towards button
+gently press button with finger
+if button is lit verify that the button's number matches 
+if lit button does not match repeat visual scan and steps after
+if lit button matches lower arm wait for further instructions
+
+Brushing teeth Algorithm
+
+walk into bathroom
+scan for toothbrush 
+once found pick up tooth brush
+scan for tooth paste
+pick up tooth paste with other hand
+squeeze tooth paste out of container on to top of tooth  
+  brush head until bursh head area is covered in tooth paste
+place tooth brush head into mouth while still holding   
+  tooth brush handle
+with the bristles facing teeth move tooth brush in 
+  circular motion 
+repeat until all sides of all teeth brushed
+spend 2.5 minutes between all teeth and divide time 
+  alotted per teeth equally
+remove tooth brush from mouth
+rince tooth brush
+place back on tooth brush holder
+turn on faucet
+rinse mouth for about 20 seconds with water from faucet
+spit out water
+turn off water
+
+
+
+
+
+
+
