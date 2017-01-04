@@ -4,7 +4,7 @@ name = gets.chomp
 puts "Volume level from 1 to 10?"
 volume = gets.chomp.to_i
 
-puts "Fur color"
+puts "Fur color?"
 fur = gets.chomp
 
 puts "Is hamster adoptable?"
