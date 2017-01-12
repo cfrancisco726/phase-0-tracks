@@ -5,7 +5,6 @@ ask user for any updates
 print latest hash
 =end
 
-#hash form 
 
 
 #Define methods to prompt user for info
@@ -76,7 +75,7 @@ when :number_of_children
 	application[:children] = get_num_children
 when :decor_theme 
      application[:decor_theme] = get_decor_theme
-     
+
 when "done"
 
 else 
