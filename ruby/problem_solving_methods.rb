@@ -46,11 +46,12 @@ def fib(num)
 	end
 end
 
-p fib(1)
+p fib(4)
 
 
 =begin
 pseudocode for even_odd_ascending(arr)
+The following method sorts an array in ascending order starting with even numbers then odd
 We learned from the insertion method.
 Define method. Parameter will be the array we are sorting.
 Declare an ascending array and set index 0 to first number of array we want to sort
