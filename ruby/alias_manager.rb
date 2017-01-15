@@ -28,7 +28,7 @@ swapped_name.each do |letter|
 				if letter == "u"
 					final_arr << "a"
 				elsif letter == "z"
-					final_arr << "a"
+					final_arr << "b"
 				elsif
 					vowel_arr.include?(letter)
 				 	new_vowel_index = vowel_arr.index(letter) + 1
