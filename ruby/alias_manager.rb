@@ -1,62 +1,54 @@
 =begin
 
-turn both first name and last name to 2 elements of array
+turn both first name and last name to 2 elements of array and switch
 turn back to string
-break up name into an array 
-initialize array for vowels and consonants
-compare array to vowel and consonants array
-if there is a match replace with next vowel or consonant
+break up new name into an array 
+compare letters to vowel and consonants array
+add 1 to each letter
+push to new array
+convert array to string
+capitalize string
 	
 =end
 
-alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-vowel_arr = ["a", "e", "i", "o", "u"]
-consonant_arr = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
-
 def alias_reverse(full_name)
+
+	vowel_arr = ["a", "e", "i", "o", "u"]
+	consonant_arr = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+	final_arr = []
 
 	arr_full = full_name.split(' ')
 	arr_full[0], arr_full[1] = arr_full[1], arr_full[0]
-	swapped_name_arr = arr_full[0] + " " + arr_full[1]
-	swapped_name_arr = swapped_name_arr.downcase
-	swapped_name_arr = swapped_name_arr.chars
-	swapped_name_arr
-alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+	swapped_name_str = arr_full[0] + " " + arr_full[1]
+	swapped_name_str1 = swapped_name_str.downcase
+	swapped_name = swapped_name_str1.chars
 
-		counter = 0
-		while counter < swapped_name_arr.length
-			current_letter = alphabet.index(swapped_name_arr[counter]) 
-			swapped_name_arr[counter] = alphabet[current_letter + 1]
-		end
-		counter += 1
-		swapped_name_arr
+
+swapped_name.each do |letter|
+				if letter == "u"
+					final_arr << "a"
+				elsif letter == "z"
+					final_arr << "a"
+				elsif
+					vowel_arr.include?(letter)
+				 	new_vowel_index = vowel_arr.index(letter) + 1
+					final_arr << vowel_arr[new_vowel_index]
+				elsif consonant_arr.include?(letter)
+					new_cons_index = consonant_arr.index(letter) + 1
+					final_arr << consonant_arr[new_cons_index]
+				elsif letter == " "
+					final_arr << " "
+				end
+			end
+		final_str = final_arr.join
+		final_cap = final_str.split.each{|i| i.capitalize!}.join(' ')
+
 end
 
 
-#swapped_name = ["l", "a", "s", "t", " ", "f", "i", "r", "s", "t"]
-=begin
-	for i in swapped_name
-		counter = 0
-		while counter < swapped_name.length
-			swapped_name.each do |vowel|
-				if vowel == vowel_arr.index(i)
-				 	current_vowel_index = vowel_arr.index(i) 
-					swapped_name[counter] = vowel_arr[current_vow_index + 1]
-					break
-				elsif vowel == consanant_arr.index(i)
-					current_cons_index = consonant_arr.index(i) 
-					swapped_name[counter] = vowel_arr[current_cons_index + 1]
-					break
-				elsif vowel == " "
-					swapped_name[counter] = " "
- 
-			    end	
-			end
-			counter += 1
-		end
-	end
-	return swapped_name
-en
-=end
-
-alias_reverse("FirstLast")
+loop do 
+puts "Enter full name (or type 'done' to quit)"
+	full_name = gets.chomp
+	break if full_name == "done"
+	p alias_reverse(full_name)
+end
