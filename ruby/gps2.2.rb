@@ -70,13 +70,25 @@ end
 #Driver code
 
 grocery_list = create_list("carrots apples cereal pizza")
-grocery_list = add_item(grocery_list, "brocolli", 2)
+grocery_list = add_item(grocery_list, "broccoli", 2)
 grocery_list = add_item(grocery_list, "celery", 3)
 grocery_list = add_item(grocery_list, "oranges", 4)
 grocery_list = remove_item(grocery_list, "carrots")
 grocery_list = remove_item(grocery_list, "oranges")
 print_list(grocery_list)
 
+# What did you learn about pseudocode from working on this challenge?
+# It's important to get your thought thought process together
+# What are the tradeoffs of using arrays and hashes for this challenge?
+#You can store a list and change it later
+# What does a method return?
+# method returns a value 
+# What kind of things can you pass into methods as arguments?
+# different kinds of input such as strings and numbers
+# How can you pass information between methods?
+# by using the return value when calling that method
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+# How to pass the methods return values were solidified in this challenge
 
 
 
