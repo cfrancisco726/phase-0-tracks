@@ -35,6 +35,8 @@ p spot.speak(3)
 p spot.roll_over()
 p spot.dog_years(10)
 p spot.shake()
+
+
 class Kittens
     def initialize
         puts "Initializing new kitten instance ..."
