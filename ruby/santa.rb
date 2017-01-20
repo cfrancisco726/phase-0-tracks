@@ -4,7 +4,6 @@ class Santa
 	attr_accessor :gender
 
 	def initialize(gender, ethnicity)
-		p "Initializing Santa instance..."
     	@gender = gender
 		@ethnicity = ethnicity 
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -62,18 +61,22 @@ santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
+
+100.times {santas << Santa.new(example_genders[rand(example_genders.length)], example_ethnicities[rand(example_ethnicities.length)]) }
+
+
 
 
 #driver code
 
 
-santas.each do |santa|
-
-p "My age is  #{santa.age}.  My gender is #{santa.gender}.  My ethnicity #{santa.ethnicity}"
-santa.get_mad_at("Rudolph")
+santas.each do |santa|	
+	(rand(140)).times do |time|
+		santa.celebrate_birthday
+	end
+	
+	p "My age is  #{santa.age}.  My gender is #{santa.gender}.  My ethnicity #{santa.ethnicity}"
+	santa.get_mad_at("Rudolph")
 
 end
 
