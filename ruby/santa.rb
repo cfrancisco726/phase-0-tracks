@@ -1,7 +1,7 @@
 class Santa
 
 	attr_reader :gender, :age, :ethnicity
-	attr_accessor :gender, 
+	attr_accessor :gender
 
 	def initialize(gender, ethnicity)
     	@gender = gender
@@ -85,12 +85,3 @@ end
 
 # p fat_santa.speak()
 # p fat_santa.eat_milk_and_cookies("Kit Kat")
-
-
-
-
-
-
-
-
-
