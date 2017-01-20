@@ -85,12 +85,3 @@ end
 
 # p fat_santa.speak()
 # p fat_santa.eat_milk_and_cookies("Kit Kat")
-
-
-
-
-
-
-
-
-
