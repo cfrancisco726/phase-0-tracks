@@ -1,7 +1,7 @@
 class Santa
 
-	attr_reader: gender, age, ethnicity
-	attr_accessor: gender
+	attr_reader :gender, :age, :ethnicity
+	attr_accessor :gender
 
 	def initialize(gender, ethnicity)
 		p "Initializing Santa instance..."
@@ -32,33 +32,31 @@ class Santa
 	def get_mad_at(reindeer)
 		new_reindeer = @reindeer_ranking.index(reindeer)
 		@reindeer_ranking << @reindeer_ranking[new_reindeer]
-		@reindeer_ranking.delete[reindeer]
-		"I am mad at #{reindeer} so he was moved to the back."
+		@reindeer_ranking.delete_at(new_reindeer)
+		p "I am mad at #{reindeer} so he was moved to the back."
+		
 
 	end	
 
-	# setter methods
-	def gender 
-		@gender
-	end
+	# # setter methods
+	# def gender 
+	# 	@gender
+	# end
 
-	# getter methods
-	def age=(new_age)
-		@age = new_age
-	end
+	# # getter methods
+	# def age=(new_age)
+	# 	@age = new_age
+	# end
 
-	def ethnicity=(new_ethnicity)
-		@ethnicity = new_ethnicity
-	end
+	# def ethnicity=(new_ethnicity)
+	# 	@ethnicity = new_ethnicity
+	# end
 
 end
 
 
 
-#fat_santa = Santa.new
 
-# p fat_santa.speak()
-# p fat_santa.eat_milk_and_cookies("Kit Kat")
 
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -75,9 +73,14 @@ end
 santas.each do |santa|
 
 p "My age is  #{santa.age}.  My gender is #{santa.gender}.  My ethnicity #{santa.ethnicity}"
-p santa.get_mad_at("Dasher")
+santa.get_mad_at("Rudolph")
 
 end
+
+#fat_santa = Santa.new
+
+# p fat_santa.speak()
+# p fat_santa.eat_milk_and_cookies("Kit Kat")
 
 
 
