@@ -71,10 +71,10 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 
 
 santas.each do |santa|	
-	(rand(140)).times do |time|
+	(rand(140)).times do |age1|
 		santa.celebrate_birthday
 	end
-	
+
 	p "My age is  #{santa.age}.  My gender is #{santa.gender}.  My ethnicity #{santa.ethnicity}"
 	santa.get_mad_at("Rudolph")
 
