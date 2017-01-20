@@ -68,15 +68,16 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 
 
 #driver code
-
+reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 
 santas.each do |santa|	
 	(rand(140)).times do |age1|
 		santa.celebrate_birthday
 	end
 
-	p "My age is  #{santa.age}.  My gender is #{santa.gender}.  My ethnicity #{santa.ethnicity}"
-	santa.get_mad_at("Rudolph")
+	p "This santa's age is #{santa.age} with a gender of #{santa.gender} and ethnicity of #{santa.ethnicity}"
+	bad_reindeer = reindeer_ranking[rand(reindeer_ranking.length)]
+	santa.get_mad_at(bad_reindeer)
 
 end
 
