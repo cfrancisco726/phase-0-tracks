@@ -1,7 +1,6 @@
 class Santa
 
-	attr_reader :gender, :age, :ethnicity
-	attr_accessor :gender, 
+	attr_accessor :gender, :age, :ethnicity
 
 	def initialize(gender, ethnicity)
     	@gender = gender
