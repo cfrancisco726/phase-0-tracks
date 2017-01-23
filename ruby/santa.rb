@@ -1,8 +1,7 @@
 class Santa
 
-	attr_reader :gender, :age, :ethnicity
-	attr_accessor :gender
-
+	attr_accessor :gender, :age, :ethnicity
+  
 	def initialize(gender, ethnicity)
     	@gender = gender
 		@ethnicity = ethnicity 
@@ -16,7 +15,7 @@ class Santa
 
 	def speak 
 	 	 puts  "Ho, ho, ho! Haaaappy holidays!" 
-	 end
+	end
 
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie}!"
@@ -24,8 +23,6 @@ class Santa
 
 	def celebrate_birthday
 		@age += 1
-
-		
 	end 
 
 	def get_mad_at(reindeer)
@@ -64,7 +61,6 @@ santas.each do |santa|
 	(rand(140)).times do |age1|
 		santa.celebrate_birthday
 	end
-
 	p "This santa's age is #{santa.age} with a gender of #{santa.gender} and ethnicity of #{santa.ethnicity}"
 	bad_reindeer = reindeer_ranking[rand(reindeer_ranking.length)]
 	santa.get_mad_at(bad_reindeer)
