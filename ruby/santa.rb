@@ -33,8 +33,6 @@ class Santa
 		@reindeer_ranking << @reindeer_ranking[new_reindeer]
 		@reindeer_ranking.delete_at(new_reindeer)
 		p "I am mad at #{reindeer} so he was moved to the back."
-		
-
 	end	
 
 	# # setter methods
@@ -53,19 +51,11 @@ class Santa
 
 end
 
-
-
-
-
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-
 100.times {santas << Santa.new(example_genders[rand(example_genders.length)], example_ethnicities[rand(example_ethnicities.length)]) }
-
-
-
 
 #driver code
 reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
