@@ -1,5 +1,5 @@
 class Santa
-
+	attr_accessor :gender, :age, :ethnicity
 	attr_accessor :gender, :age, :ethnicity
 
 	def initialize(gender, ethnicity)
@@ -15,7 +15,7 @@ class Santa
 
 	def speak 
 	 	 puts  "Ho, ho, ho! Haaaappy holidays!" 
-	 end
+	end
 
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie}!"
@@ -23,8 +23,6 @@ class Santa
 
 	def celebrate_birthday
 		@age += 1
-
-		
 	end 
 
 	def get_mad_at(reindeer)
