@@ -1,4 +1,4 @@
-class Word_Game
+class Game
 
 	attr_accessor :word_arr, :guess_arr, :new_arr, :game_over, :game_count
 
@@ -47,7 +47,7 @@ puts "Welcome to Word_game"
 puts "---------------------"
 puts "Player 1: Enter a word for player 2 to guess."
 word_input = gets.chomp
-word_game = Word_Game.new(word_input)
+word_game = Game.new(word_input)
 
 loop do 
 	puts "Player 2: Enter a letter guess. You only have #{word_game.word_arr.length - word_game.game_count} tries."
