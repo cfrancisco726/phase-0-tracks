@@ -1,5 +1,5 @@
 
-require_relative 'Game'
+require_relative 'game'
 
 describe Game do
   let(:game) { Game.new('dog') }
@@ -7,6 +7,8 @@ describe Game do
   it "word input splits into array" do
     expect(game.word_arr).to eq ["d", "o", "g"]
   end
+
+  
 
 end
 

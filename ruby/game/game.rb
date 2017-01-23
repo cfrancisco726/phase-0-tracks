@@ -42,19 +42,19 @@ end
 
 
 
-#driver code 
+# driver code 
 puts "Welcome to Word_game"
 puts "---------------------"
 puts "Player 1: Enter a word for player 2 to guess."
 word_input = gets.chomp
-word_game = Game.new(word_input)
+game = Game.new(word_input)
 
 loop do 
-	puts "Player 2: Enter a letter guess. You only have #{word_game.word_arr.length - word_game.game_count} tries."
+	puts "Player 2: Enter a letter guess. You only have #{game.word_arr.length - game.game_count} tries."
 	guess = gets.chomp
-	word_game.check_guess(guess)
-	word_game.game_is_over
-	break if word_game.game_count == word_game.word_arr.length || word_game.new_arr == word_game.word_arr
+	game.check_guess(guess)
+	game.game_is_over
+	break if game.game_count == game.word_arr.length || game.new_arr == game.word_arr
 end
 
 
