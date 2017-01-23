@@ -2,6 +2,7 @@ class Santa
 
 	attr_accessor :gender, :age, :ethnicity
   
+
 	def initialize(gender, ethnicity)
     	@gender = gender
 		@ethnicity = ethnicity 
@@ -23,6 +24,7 @@ class Santa
 
 	def celebrate_birthday
 		@age += 1
+
 	end 
 
 	def get_mad_at(reindeer)
@@ -55,14 +57,13 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 100.times {santas << Santa.new(example_genders[rand(example_genders.length)], example_ethnicities[rand(example_ethnicities.length)]) }
 
 #driver code
-reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 
 santas.each do |santa|	
 	(rand(140)).times do |age1|
 		santa.celebrate_birthday
 	end
 	p "This santa's age is #{santa.age} with a gender of #{santa.gender} and ethnicity of #{santa.ethnicity}"
-	bad_reindeer = reindeer_ranking[rand(reindeer_ranking.length)]
+	bad_reindeer = santa.reindeer_ranking[rand(santa.reindeer_ranking.length)]
 	santa.get_mad_at(bad_reindeer)
 
 end

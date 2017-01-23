@@ -1,3 +1,4 @@
+
 require_relative 'Game'
 
 describe Game do
@@ -8,5 +9,4 @@ describe Game do
   end
 
 end
-
 
