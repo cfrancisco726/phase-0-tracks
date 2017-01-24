@@ -31,11 +31,11 @@ class Game
 
 	def game_is_over
 		if @new_arr == @word_arr
-			@game_won == true
-			puts "You chose... wisely"
+			p "You chose... wisely"
+			@game_won = true
 		elsif @game_count == @word_arr.length
-			@game_won == false
-			puts "Too many tries. You chose... poorly"
+			p "Too many tries. You chose... poorly"
+			@game_won = false
 		end
 	end
 end
