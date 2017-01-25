@@ -45,8 +45,7 @@ class VirusPredictor
           p "#{@state} will lose #{number_of_deaths} people in this outbreak"
           break
       elsif 
-          @population_density
-          counter < 50
+          @population_density < 50
           number_of_deaths = (@population * 0.05).floor
           p "#{@state} will lose #{number_of_deaths} people in this outbreak"
         break
@@ -60,7 +59,7 @@ class VirusPredictor
 # prints the speed of spreading
 
   def speed_of_spread #in months
-    # We are still perfecting our formula here. The speed is also affected
+    # We are still perfecting our formula here. The speed is also affectedm
     # by additional factors we haven't added into this functionality.
     counter = 200
     x = 0.5
@@ -70,8 +69,7 @@ class VirusPredictor
          puts " and will spread across the state in #{speed} months.\n\n"
         break
       elsif 
-        @population_density
-        counter < 50
+        @population_density < 50
         puts " and will spread across the state in 2.5 months.\n\n"
         break
       end
