@@ -4,12 +4,11 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
-require_relative 'state_data'
-
 # obtaining information from another file in same folder
 # obtains information from other built in ruby files
+require_relative 'state_data'
+
+
 
 class VirusPredictor
 
@@ -24,58 +23,52 @@ class VirusPredictor
   end
 
 # calling 2 methods and passing in arguments
+ 
 
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
-  private
+ private
 
 # if/else depending on population_density 
 # prints what state will lose # of deaths 
 
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else
-      number_of_deaths = (@population * 0.05).floor
+    counter = 200
+    x = 0.4
+    until counter < 50
+      if @population_density >= counter
+        number_of_deaths = (@population * x).floor
+         p "#{@state} will lose #{number_of_deaths} people in this outbreak"
+        break
+      end
+      counter -= 50
+      x -= 0.1
     end
-
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
-
   end
+
 
 # conditional statements
 # prints the speed of spreading
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-    speed = 0.0
-
-    if @population_density >= 200
-      speed += 0.5
-    elsif @population_density >= 150
-      speed += 1
-    elsif @population_density >= 100
-      speed += 1.5
-    elsif @population_density >= 50
-      speed += 2
-    else
-      speed += 2.5
+    counter = 200
+    x = 0.5
+    until counter < 50
+      if @population_density >= counter
+        speed = x
+         puts " and will spread across the state in #{speed} months.\n\n"
+        break
+      end
+      counter -= 50
+      x += 0.5
     end
-
-    puts " and will spread across the state in #{speed} months.\n\n"
-
-  end
+end
 
 end
 
@@ -89,6 +82,16 @@ STATE_DATA.each do |state, pop_info|
   state_info.virus_effects
 end
 
+#reflect
+# 1. rocket and symbols
+# 2. require_relatvie - obtaining information from another file in same folder
+#    require - obtains information from other built in ruby files
+# 3. each loop through a block with key and value
+#    while or until loops work too. Just need to access each element in hash. 
+# 4. instance variables are accessible through out the whole class
+# 5. Accessing hashes inside hashes.  
+
+
 # alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 # alabama.virus_effects
 
@@ -100,6 +103,8 @@ end
 
 # alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 # alaska.virus_effects
+
+
 
 
 #=======================================================================
