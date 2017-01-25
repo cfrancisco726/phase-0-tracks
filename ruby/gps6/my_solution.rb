@@ -39,14 +39,20 @@ class VirusPredictor
     # predicted deaths is solely based on population density
     counter = 200
     x = 0.4
-    until counter < 50
-      if @population_density >= counter
-        number_of_deaths = (@population * x).floor
-         p "#{@state} will lose #{number_of_deaths} people in this outbreak"
+    until counter == 0
+      if  @population_density >= counter
+          number_of_deaths = (@population * x).floor
+          p "#{@state} will lose #{number_of_deaths} people in this outbreak"
+          break
+      elsif 
+          @population_density
+          counter < 50
+          number_of_deaths = (@population * 0.05).floor
+          p "#{@state} will lose #{number_of_deaths} people in this outbreak"
         break
       end
-      counter -= 50
-      x -= 0.1
+        counter -= 50
+        x -= 0.1
     end
   end
 
@@ -59,10 +65,15 @@ class VirusPredictor
     # by additional factors we haven't added into this functionality.
     counter = 200
     x = 0.5
-    until counter < 50
+    until counter == 0 
       if @population_density >= counter
         speed = x
          puts " and will spread across the state in #{speed} months.\n\n"
+        break
+      elsif 
+        @population_density
+        counter < 50
+        puts " and will spread across the state in 2.5 months.\n\n"
         break
       end
       counter -= 50
