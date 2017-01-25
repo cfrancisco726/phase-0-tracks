@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [ with: Christopher Frazzini].
+# We spent [2] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # obtaining information from another file in same folder
@@ -55,7 +55,7 @@ class VirusPredictor
         x -= 0.1
     end
   end
-
+m
 
 # conditional statements
 # prints the speed of spreading
