@@ -10,7 +10,14 @@
 #
 require_relative 'state_data'
 
+# obtaining information from another file in same folder
+# obtains information from other built in ruby files
+
 class VirusPredictor
+
+# creates the attributes
+# setting them available through out the whole class
+# passing in state, density, population
 
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
@@ -18,12 +25,17 @@ class VirusPredictor
     @population_density = population_density
   end
 
+# calling 2 methods and passing in arguments
+
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
   private
+
+# if/else depending on population_density 
+# prints what state will lose # of deaths 
 
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
@@ -42,6 +54,9 @@ class VirusPredictor
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
+
+# conditional statements
+# prints the speed of spreading
 
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
