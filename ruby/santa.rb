@@ -1,5 +1,5 @@
 class Santa
-	attr_accessor :gender, :age, :ethnicity
+	attr_accessor :gender, :age, :ethnicity, :reindeer
 
 	def initialize(gender, ethnicity)
     	@gender = gender
@@ -49,7 +49,7 @@ end
 
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_ethnicities = ["black", "Lasstino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
 #driver code
 
