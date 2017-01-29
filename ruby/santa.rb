@@ -1,7 +1,10 @@
 class Santa
 
+	attr_accessor :gender, :age, :ethnicity, :reindeer
+
+
 	attr_accessor :gender, :age, :ethnicity
-  
+
 
 	def initialize(gender, ethnicity)
     	@gender = gender
@@ -52,20 +55,23 @@ end
 
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-
-100.times {santas << Santa.new(example_genders[rand(example_genders.length)], example_ethnicities[rand(example_ethnicities.length)]) }
+example_ethnicities = ["black", "Lasstino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
 #driver code
 
+
+50.times {santas << Santa.new(example_genders[rand(example_genders.length)], example_ethnicities[rand(example_ethnicities.length)]) }
+
+reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+
+
 santas.each do |santa|	
 	(rand(140)).times do |age1|
-		santa.celebrate_birthday
+	santa.celebrate_birthday
 	end
 	p "This santa's age is #{santa.age} with a gender of #{santa.gender} and ethnicity of #{santa.ethnicity}"
 	bad_reindeer = santa.reindeer_ranking[rand(santa.reindeer_ranking.length)]
 	santa.get_mad_at(bad_reindeer)
-
 end
 
 #fat_santa = Santa.new
