@@ -1,55 +1,81 @@
-#hash form 
+=begin
+define methods for prompting users input
+print back hash after questions answered
+ask user for any updates
+print latest hash
+=end
+
+
+
+#Define methods to prompt user for info
+def get_name
+	puts "What is your name?"
+	your_name = gets.chomp
+	your_name
+end
+
+def get_address
+	puts "What is your address?"
+	your_address = gets.chomp
+	your_address
+end
+
+def get_age
+	puts "What is your age?"
+	your_age = gets.chomp.to_i
+	your_age
+end
+
+def get_num_children
+	puts "What is the number of your children?"
+	your_num_children = gets.chomp.to_i
+	your_num_children
+end
+
+def get_decor_theme
+	puts "What is your decor theme?"
+	your_decor_theme = gets.chomp
+	your_decor_theme
+end
+
+#assign user data to variable
+
+your_name = get_name
+your_address = get_address
+your_age = get_age
+your_num_children = get_num_children
+your_decor_theme = get_decor_theme
+
+#hash form
 
 application = {
-	name: "",
-	address: "",
-	age: 0,
-	number_of_children: 0, 
-	decor_theme: ["Modern", "Rustic", "Traditional"],
-	decor_theme_choice: []
+	name: your_name,
+	address: your_address,
+	age: your_age,
+	number_of_children: your_num_children, 
+	decor_theme: your_decor_theme
 }
 
 
-#Prompt user for info
 
-puts "What is your name?"
-application[:name] = gets.chomp
-
-puts "What is your address?"
-application[:address] = gets.chomp
-
-puts "What is your age?"
-application[:age] = gets.to_i
-
-puts "What is the number of your children?"
-application[:number_of_children] = gets.to_i
-
-
-puts "What is your decor theme? 1 for Modern. 2 for Rustic. 3 for Traditional"
-decor_var = gets.to_i 
-application[:decor_theme_choice] << application[:decor_theme][decor_var - 1]
+p application
 
 #Prompt users to ammend keys
 
-puts "Choose which key you would like to change. 'name', 'address', 'age', 'children', 'decor theme' or 'none' "
+puts "Choose which key you would like to change. 'name', 'address', 'age', 'children', 'decor_theme' or 'done' "
 user_input = gets.chomp
-case user_input
-when "name"
-	puts "What is your name?"
-    application[:name] = gets.chomp
-when "address"
-	puts "What is your address?"
-    application[:address] = gets.chomp
-when "age"
-	puts "What is your age?"
-    application[:age] = gets.to_i
-when "children"
-	puts "What is the number of your children?"
-	application[:number_of_children] = gets.to_i
-when "decor theme"
-	puts "What is your decor theme? 1 for Modern. 2 for Rustic. 3 for Traditional"
-	decor_var = gets.to_i 
-	application[:decor_theme_choice] << application[:decor_theme][decor_var - 1]
+case user_input.to_sym
+when :name
+	application[:name] = get_name
+when :address
+	application[:address] = get_address
+when :age
+	application[:age] = get_age
+when :number_of_children
+	application[:children] = get_num_children
+when :decor_theme 
+     application[:decor_theme] = get_decor_theme
+
 when "done"
 
 else 
