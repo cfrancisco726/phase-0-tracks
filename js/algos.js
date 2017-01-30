@@ -59,26 +59,23 @@ function match(){
 
 
 function generate(num){
-	arrGen = [];
-	var randomLength = Math.floor(Math.random() * (10 - 1)) + 1;
-	// for (var i = 0; i < num; i ++){
+  	var randomLength = Math.random() * (10 - 1) + 1;
+	var text = "";
+	var possible = "abcdefghijklmnopqrstuvwxyz";
+	var arrGen = [];
 	for(var i = 0; i < num; i++) {
-
-		for(var b = 0; b < randomLength; b++) {
-		var text = "";
-	    var possible = "abcdefghijklmnopqrstuvwxyz";
-
-		    for(var x = 0; x < length; x++) {
-		        text += possible.charAt(Math.floor(Math.random() * possible.length));
-		    }
-		    arrGen.push(text)
-		}
-
+	    for(var x = 0; x < randomLength; x++) {
+	        text += possible.charAt(Math.floor(Math.random() * possible.length));
+	    }
+		arrGen.push(text);
+		var text ="";
 	}
-}
+	console.log(arrGen);
+	return arrGen;
+};
 
 
 // driver code
 longest();
 match();
-generate(3);
+generate(5);
