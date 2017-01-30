@@ -42,6 +42,7 @@ function match(){
 			return true;
 		}else{
 			counter += 1
+			return counter;
 			console.log(counter);
 		}
 	}
@@ -55,12 +56,29 @@ function match(){
 
 };
 
-// genArr = []
-// function generate(num){
 
-// }
+
+function generate(num){
+	arrGen = [];
+	var randomLength = Math.floor(Math.random() * (10 - 1)) + 1;
+	// for (var i = 0; i < num; i ++){
+	for(var i = 0; i < num; i++) {
+
+		for(var b = 0; b < randomLength; b++) {
+		var text = "";
+	    var possible = "abcdefghijklmnopqrstuvwxyz";
+
+		    for(var x = 0; x < length; x++) {
+		        text += possible.charAt(Math.floor(Math.random() * possible.length));
+		    }
+		    arrGen.push(text)
+		}
+
+	}
+}
 
 
 // driver code
 longest();
 match();
+generate(3);
