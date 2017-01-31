@@ -22,40 +22,41 @@ var b = {name: "Tamir", age: 54, weight: 10};
 
 
 function match(){
-	
-	for (var key of Object.keys(a)) {  
-  	var aValues = a[key];
-  	// console.log(aValues);
-}
-
-	for (var key of Object.keys(b)) {  
-  	var bValues = b[key];
-  	// console.log(bValues);
-}
 
 	aKeys = Object.keys(a);
-	// console.log(aKeys);
+	console.log(aKeys);
 	bKeys = Object.keys(b);
-	// console.log(bKeys);
+	console.log(bKeys);
 
-	for (var i = 0; i < aValues.length; i ++){
-		var counter = 0;
+	aValues = Object.keys(a).map(function(key){
+		return a[key];
+	});
+	console.log(aValues);
+	
+	bValues = Object.keys(b).map(function(key){
+		return b[key];
+	});
+	console.log(bValues);
+
+	
+		for (var i = 0; i < aValues.length; i++){
+	 	var counter = 0;
 		if (aValues[i] === bValues[i] && aKeys[i] === bKeys[i]){
 			console.log("test");
 			return true;
-		}else{
-			counter += 1
-			return counter;
-			console.log(counter);
+			}else{
+				counter += 1
+				return counter;
+				console.log(counter);
+			}
 		}
-	};
-		if (counter === aKeys.length){
-			console.log("false");
-			return false;
-		}else{
-			console.log("true");
-			return true;
-		}
+			if (counter === aKeys.length){
+				console.log("false");
+				return false;
+			}else{
+				console.log("true");
+				return true;
+			}
 
 };
 
@@ -82,3 +83,5 @@ function generate(num){
 longest();
 match();
 generate(5);
+
+
