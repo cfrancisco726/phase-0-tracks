@@ -1,51 +1,25 @@
-
-phrase = ["long phrase","longest phrase","longer phrase"];
-phraseLengths = [];
-
-function longest(){
+function longest(arr){
 	for (var i = 0; i < phrase.length; i ++){
 		phraseLengths.push(phrase[i].length);
 	};
-	var length_of_word = Math.max.apply(Math, phraseLengths);
-	var longest_word = phraseLengths.indexOf(length_of_word);
-	console.log(phrase[longest_word]);
-	
+	var length = Math.max.apply(Math, phraseLengths);
+	var longestWord = phraseLengths.indexOf(length);
+	return phrase[longestWord];
 };
 
-function match(){
-
-};
-
-
-var a = {name: "Tamir", age: 4, weight: 12};
-var b = {name: "John", age: 54, weight: 10};
-
-
-function match(){
-
-	var aKeys = Object.keys(a);
-	// console.log(aKeys);
-	var bKeys = Object.keys(b);
-	// console.log(bKeys);
-
-	var aValues = Object.keys(a).map(function(key){
-		// return a[key];
-	});
-	
-	var bValues = Object.keys(b).map(function(key){
-		// return b[key];
-	});
-
-	
-	for (var i = 0; i < aKeys.length; i++){
-		if (aValues[i] === bValues[i] && aKeys[i] === bKeys[i]){
-			return true;
-		}
-	}
-
-	return false;
-
-};
+function match(source, comparison) {
+  var sourceKeys = Object.keys(source);
+  var isMatch = false;
+    
+  sourceKeys.some(function(key) {
+      if (comparison[key] !== 'undefined' && source[key] === comparison[key]) {
+        isMatch = true;
+        return true;
+      }
+  });
+  
+  return isMatch;
+}
 
 
 
@@ -67,8 +41,14 @@ function generate(num){
 
 
 // driver code
-longest();
-console.log(match());
+
+var phrase = ["long phrase","longest phrase","longer phrase"];
+var phraseLengths = [];
+var a = {name: "Tamir", age: 4, weight: 140, height: 6};
+var b = {name: "John", age: 5, weight: 160};
+
+console.log(longest(phrase));
+console.log(match(a,b));
 generate(5);
 
 
