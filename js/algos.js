@@ -29,12 +29,11 @@ function match(){
 	// console.log(bKeys);
 
 	var aValues = Object.keys(a).map(function(key){
-		return a[key];
+		// return a[key];
 	});
-	// console.log(aValues);
 	
 	var bValues = Object.keys(b).map(function(key){
-		return b[key];
+		// return b[key];
 	});
 
 	
