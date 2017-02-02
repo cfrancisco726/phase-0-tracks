@@ -1,0 +1,19 @@
+Release 2
+
+question 3.
+select users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment from users join reviews on users.id = reviews.users_id join businesses on businesses.id = reviews.business_id;
+
+Mary|Jones|Irish Pub|5|great food
+Chris|Fernandez|Olive garden|3|good good
+John|Smith|Buffalo Wild Wings|2|great food
+Mary|Jones|Irish Pub|4|great food
+Chris|Fernandez|Olive garden|2|good good
+John|Smith|Buffalo Wild Wings|1|bad food
+
+
+question 4. 
+
+select users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment from users inner join reviews on users.id = reviews.users_id inner join businesses on businesses.id = reviews.business_id where business_id = 1;
+
+Mary|Jones|Irish Pub|5|great food
+Mary|Jones|Irish Pub|4|great food
