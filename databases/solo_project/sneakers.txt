@@ -1,0 +1,19 @@
+id 	brand	model  			name  			releaseDate    sizeId
+1  	Adidas  NMD			glitch camo		2016-04-01	1
+2	Adidas 	NMD			glitch camo		2016-04-01	3
+3	Adidas 	NMD			OG			2017-01-14	1
+4	Adidas 	Ultraboost		Wood Wood 		2016-03-14	3
+5	Adidas 	Yeezy 350		Turtle dove		2016-06-27	4
+6	Adidas	Yeezy 750		triple black		2016-09-01	3
+7	Nike 	Presto			Acronym green		2016-10-01	2 	
+8	Nike 	Presto			Acronym green		2016-10-01	3	
+9	Nike 	Air max 1		Atmos elephant		2006-05-01	2
+10	Jordan 	1			Fragment		2015-12-10	5
+11 	Jordan 	1			Fragment		2015-12-10	6	
+12 	Jordan 	1			Chicago			2015-12-10	6	
+13 	Jordan 	1			Chicago			2015-12-10	6	
+
+
+size table
+id   - 1, 2, 3, 4, 5, 6
+size - 8,9,10,11,12,13
