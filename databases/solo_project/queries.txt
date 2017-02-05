@@ -1,0 +1,57 @@
+Release 2 
+
+Display the information in one table (either table is fine).
+sqlite> SELECT * FROM sizes;
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+UPDATE sneakers SET sizeId=5 WHERE name="Turtle dove";
+
+Display the information in both tables using one query.
+SELECT * FROM sneakers, sizes WHERE sneakers.sizeID = sizes.id;
+
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+select size, name from sneakers cross join sizes;
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+DELETE FROM sneakers WHERE name = 'OG';
+
+Release 3
+
+There are lots of different kinds of joins. What are they? Can you apply different conditions to a join to change what's displayed? Can you bookmark any good diagrams that will help you tell different joins apart in the future?
+
+
+
+Try a few different joins in your database, and record the commands and the output in queries.txt.
+cross join 
+select size, name from sneakers cross join sizes;
+8|glitch camo
+9|glitch camo
+10|glitch camo
+11|glitch camo
+12|glitch camo
+13|glitch camo....
+
+
+inner join
+select size, name from sneakers inner join sizes on sneakers.id = sizes.size;
+8|Acronym green
+9|Fragment
+10|Fragment
+11|Chicago
+12|Chicago
+
+outer join
+select size, name from sneakers left outer join sizes on sneakers.id = sizes.size;
+glitch camo
+|glitch camo
+|Wood Wood
+|Turtle dove
+|triple black
+|Acronym green
+8|Acronym green
+9|Fragment
+10|Fragment
+11|Chicago
+12|Chicago
+
