@@ -23,7 +23,6 @@ SQL
 create_table_time = <<-SQL
   CREATE TABLE IF NOT EXISTS length_of_time(
     id INTEGER PRIMARY KEY,
-    event VARCHAR(255),
     time_difference INT
   )
 SQL
@@ -43,8 +42,6 @@ create_trg_insert_finish = <<-SQL
 SQL
 
 
-
-
 # add a test event
 def insert_start (db, event)
 	db.execute("INSERT INTO start (event) VALUES (?)", [event])
@@ -53,22 +50,24 @@ end
 def insert_finish (db, event)
 	db.execute("INSERT INTO finish (event) VALUES (?)", [event])
 end
-# select * from schedule where id = 1
+
+def insert_difference(db, time_difference )
+	db.execute("INSERT INTO length_of_time (time_difference) VALUES (?)", [time_difference])
+end
 
 db.execute(create_table_start)
 db.execute(create_table_finish)
+db.execute(create_table_time)
+
 
 db.execute(create_trg_insert_start)
 db.execute(create_trg_insert_finish)
 
 
-# db.execute(create_trg_update_cmd)
 p "Welcome to the wasted time manager."
 p "-----------------------------------"
-p "Keep track of how much time you wasted today by entering an event where you believe you will waste time."
-p "Some event examples may be, watching TV, spending time on social media, or playing video games."
-p 
-p "Specify what you're going to start doing where you will be wasting time."
+p "Keep track of how much time you wasted today by entering an event where you believe you will waste time." 
+p "Specify what you will be doing.  The timer starts now."
 event = gets.chomp
 insert_start(db, event)
 
@@ -84,18 +83,25 @@ finish = db.execute("select * from finish")
 puts finish.class
 p finish
 
-# added = db.execute("select updatedon from schedule where id = 1")
-# p added
-# finished = db.execute("select updatedon from schedule where id = 2")
-# p finished
+started_arr = db.execute("select started from start where id = 1")
+puts started_arr.class
+p started_arr
+finished_arr = db.execute("select finished from finish where id = 1")
+puts finished_arr.class
+p finished_arr
 
-# p difference = finished.to_i - added.to_i
-# SELECT CONCAT(DATEDIFF(closed_on, added_on), 
-#               ' days ', 
-#               SUBSTRING_INDEX(TIMEDIFF(closed_on, added_on), ':', 1), 
-#               ' hours ', 
-#               SUBSTR(TIMEDIFF(closed_on, added_on), INSTR(TIMEDIFF(closed_on, added_on), ':')+1, 2),  
-#               ' minutes')
+p difference = (finished_arr[finished] - started_arr[started])
+
+
+insert_difference(difference)
+
+time_diff = db.execute("select * from length_of_time")
+puts time_diff.class
+p time_diff
+
+
+
+
 
 
 
