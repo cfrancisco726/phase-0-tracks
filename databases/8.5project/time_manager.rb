@@ -24,16 +24,17 @@ def insert (db, event)
 	db.execute("INSERT INTO schedule (event) VALUES (?)", [event])
 end
 
-select * from schedule where id = 1
+# select * from schedule where id = 1
 
 db.execute(create_table_cmd)
 db.execute(create_trg_insert_cmd)
 
 # db.execute(create_trg_update_cmd)
 p "Welcome to the wasted time manager."
+p "-----------------------------------"
 p "Keep track of how much time you wasted today by entering an event where you believe you will waste time."
 p "Some event examples may be, watching TV, spending time on social media, or playing video games."
-
+p 
 p "Specify what you're going to start doing where you will be wasting time."
 event = gets.chomp
 insert(db, event)
