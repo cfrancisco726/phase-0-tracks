@@ -1,0 +1,50 @@
+Is Sinatra the only web app library in Ruby? What are some others?
+
+Nancy
+Inspired in Sinatra and Cuba, Nancy is a minimal Ruby micro framework for developers. The entire project is maintained by guilleiguaran and is an ideal pick for developers.
+
+SCORCHED
+
+Scorched is one generic, unopinionated, dry, lightweight web framework for Ruby. It provides a generic yet powerful set of constructs for processing HTTP requests with which websites and applications of any scale can be built.
+
+ruby on rails 
+Ruby on Rails is a full-stack web framework optimized for programmer happiness and sustainable productivity. It encourages beautiful code by favoring convention over configuration.
+
+GRAPE
+This is a REST-like API micro-framework for Ruby. The framework is designed to run on Rack or complement existing web application frameworks such as Rails and Sinatra by providing a simple DSL to easily develop RESTful APIs.
+
+CAMPING
+Camping is a small web framework that is a little white blood cell in the vein of Rails. It is an MVC web framework which is just 4kb in size and its built so it stays around the same range.
+
+LOTUS
+Lotus is open source software that is well known for simplicity, fewer DSLs, minimal conventions, more objects, zero monkey-patching and the separation of concerns between MVC layers. Made up of standalone frameworks and each one shipped as an independent gem to emphasize the separation of concerns Lotus is one best pick for web app developers.
+
+Rack
+Rack provides a minimal, modular and adaptable interface for developing web applications in Ruby. By wrapping HTTP requests and responses in the simplest way possible, it unifies and distills the API for web servers, web frameworks, and software in between (the so-called middleware) into a single method call. Also see http://rack.github.io/.
+
+REMAZE
+Ramaze is a simple and straight-forward web-framework that helps developers in making things simple and complex in a fun way.
+
+NYNY
+This is a framework that has all the core stuff to run. Developers can easily extend NYNY via its extension interface. Each NYNY app is a Rack middleware, so it can be used inside of Sinatra, Rails or any other Rack-based app.
+
+CELLULOID
+Celluloid is a concurrent object oriented programming framework for Ruby that enables users to build multithreaded programs out of concurrent objects just as easily as you build sequential programs out of regular objects.
+
+Are SQLite and the sqlite3 gem your only options for using a database with Sinatra? What are some others?
+
+postgreSQL - activerecord
+postgreSQL - datamapper
+Mongo
+
+
+What is meant by the term web stack?
+
+collection of software required for web development.
+at a min contains an operating system (OS) a programming language, database, software, and wed server.  
+LAMP - Linux, Apache, MySQL, PHP
+LAMR -  Linux, Apache, MySQL, PHP
+MEAN - MongoDB, express.js, angular.js, node.js
+
+
+
